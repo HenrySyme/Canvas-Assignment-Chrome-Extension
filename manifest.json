@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Canvas assignment bot",
+  "version": "1.0",
+  "description": "Tracks and reports what canvas assignments the user has",
+  
+  "host_permissions" : ["*://*/*"],
+
+  "content_scripts": [
+  {
+    "matches": ["*://*/*"],
+    "js": ["content.js"],
+    "css": ["style.css"],
+    "run_at": "document_start"
+  },
+  {
+    "matches":["*://*/*"],
+    "html":["injection.html"],
+    "css": ["lib/flatpickr.min.css"],
+    "js": ["lib/flatpickr.min.js"],
+    "world": "MAIN" 
+  }
+],
+
+  "web_accessible_resources": [
+    {
+      "resources": [ "injection.html", "manager.js"],
+      "matches": ["*://*/*"]
+    }
+  ]
+}

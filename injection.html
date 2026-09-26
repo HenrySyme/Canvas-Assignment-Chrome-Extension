@@ -1,0 +1,97 @@
+<link rel="stylesheet" href="lib/flatpickr.min.css">
+<div class="div-centerer">
+    <div id="loader">
+    </div>
+</div>
+<div id="hidden-container">
+    <section id="time">
+        <div class="div-centerer" id="start-end-date">
+            <div id="div-left">
+                <label for="datePicker-start-lable" class="calendar-text">Start:</label>
+                <input type="text" id="date-picker-start" placeholder="Select date..." class="calendar">
+            </div>
+            <div id="div-right">
+                <label for="datePicker-end-lable" class="calendar-text">End:</label>
+                <input type="text" id="date-picker-end" class="calendar" placeholder="Select date...">
+            </div>
+        </div>
+    </section>
+
+    <div id=injection class=side-bar>
+        <div class="top-buttons-container">
+            <button id="announcement-button">
+                <svg name="IconAnnouncement" viewBox="0 0 1920 1920" rotate="0" data-cid="InlineSVG SVGIcon" width="1em" height="1em" aria-hidden="true" role="presentation" focusable="false" class="css-5sj4z-inlineSVG-svgIcon" style="width: 1em; height: 1em;"><g role="presentation"><path d="M1587.162 31.278c11.52-23.491 37.27-35.689 63.473-29.816 25.525 6.099 43.483 28.8 43.483 55.002V570.46C1822.87 596.662 1920 710.733 1920 847.053c0 136.32-97.13 250.503-225.882 276.705v513.883c0 26.202-17.958 49.016-43.483 55.002a57.279 57.279 0 0 1-12.988 1.468c-21.12 0-40.772-11.745-50.485-31.171C1379.238 1247.203 964.18 1242.347 960 1242.347H564.706v564.706h87.755c-11.859-90.127-17.506-247.003 63.473-350.683 52.405-67.087 129.657-101.082 229.948-101.082v112.941c-64.49 0-110.57 18.861-140.837 57.487-68.781 87.868-45.064 263.83-30.269 324.254 4.18 16.828.34 34.673-10.277 48.34-10.73 13.665-27.219 21.684-44.499 21.684H508.235c-31.171 0-56.47-25.186-56.47-56.47v-621.177h-56.47c-155.747 0-282.354-126.607-282.354-282.353v-56.47h-56.47C25.299 903.523 0 878.336 0 847.052c0-31.172 25.299-56.471 56.47-56.471h56.471v-56.47c0-155.634 126.607-282.354 282.353-282.354h564.593c16.941-.112 420.48-7.002 627.275-420.48Zm-5.986 218.429c-194.71 242.371-452.216 298.164-564.705 311.04v572.724c112.489 12.876 369.995 68.556 564.705 311.04ZM903.53 564.7H395.294c-93.402 0-169.412 76.01-169.412 169.411v225.883c0 93.402 76.01 169.412 169.412 169.412H903.53V564.7Zm790.589 123.444v317.93c65.618-23.379 112.94-85.497 112.94-159.021 0-73.525-47.322-135.53-112.94-158.909Z" fill-rule="evenodd"></path></g></svg>
+            </button>
+        </div>
+        <div class="top-buttons-container">
+            <button id="assignment-button">
+                <svg name="IconAssignment" viewBox="0 0 1920 1920" rotate="0" data-cid="InlineSVG SVGIcon" width="1em" height="1em" aria-hidden="true" role="presentation" focusable="false" class="css-5sj4z-inlineSVG-svgIcon" style="width: 1em; height: 1em;"><g role="presentation"><path d="M1468.214 0v564.698h-112.94V112.94H112.94v1694.092h1242.334v-225.879h112.94v338.819H0V0h1468.214Zm129.428 581.311c22.137-22.136 57.825-22.136 79.962 0l225.879 225.879c22.023 22.023 22.023 57.712 0 79.848l-677.638 677.637c-10.616 10.504-24.96 16.49-39.98 16.49h-225.88c-31.17 0-56.469-25.299-56.469-56.47v-225.88c0-15.02 5.986-29.364 16.49-39.867Zm-155.291 314.988-425.895 425.895v146.031h146.03l425.895-425.895-146.03-146.03Zm-764.714 346.047v112.94H338.82v-112.94h338.818Zm225.88-225.88v112.94H338.818v-112.94h564.697Zm734.106-315.44-115.424 115.425 146.03 146.03 115.425-115.423-146.031-146.031ZM1129.395 338.83v451.758H338.82V338.83h790.576Zm-112.94 112.94H451.759v225.878h564.698V451.77Z" fill-rule="evenodd"></path></g></svg>
+            </button>
+        </div>
+        <div class="top-buttons-container">
+            <button id="grade-button" >
+                <svg name="IconGradebook" viewBox="0 0 1920 1920" rotate="0" data-cid="InlineSVG SVGIcon" width="1em" height="1em" aria-hidden="true" role="presentation" focusable="false" class="css-1uh2md0-inlineSVG-svgIcon" style="width: 1em; height: 1em;"><g role="presentation"><path d="M1801.441 0v1920H219.03v-439.216h-56.514c-31.196 0-56.515-25.299-56.515-56.47 0-31.172 25.319-56.47 56.515-56.47h56.514V1029.02h-56.514c-31.196 0-56.515-25.3-56.515-56.471 0-31.172 25.319-56.47 56.515-56.47h56.514V577.254h-56.514c-31.196 0-56.515-25.299-56.515-56.47 0-31.172 25.319-56.471 56.515-56.471h56.514V0h1582.412Zm-113.03 112.941H332.06v351.373h56.515c31.196 0 56.514 25.299 56.514 56.47 0 31.172-25.318 56.47-56.514 56.47H332.06v338.824h56.515c31.196 0 56.514 25.3 56.514 56.471 0 31.172-25.318 56.47-56.514 56.47H332.06v338.824h56.515c31.196 0 56.514 25.299 56.514 56.47 0 31.172-25.318 56.471-56.514 56.471H332.06v326.275h1356.353V112.94Zm-508.803 225.883v112.94H671.373v677.648h677.647V734.118h112.94v508.235H558.432v-903.53h621.177Zm207.326 75.817 79.85 79.85-432.452 432.451-224.866-224.979 79.85-79.85 145.016 145.13 352.602-352.602Z" fill-rule="evenodd"></path></g></svg>
+            </button>
+        </div>
+    </div>
+
+
+    <div id="central-information"></div>
+    <div id="loading-animation">
+    <p id="original-temp-text"></p>
+    </div>
+
+    <div id="template-container">
+        <template id="announcement-veiw">
+            <div id="container">
+                <div class="div-centerer" id="announcement-text">
+                    <h1 class="title-text" id="announcement-title">Announcement</h1>
+                    <p class="total-score" id="announcement-number">0/0</p>
+                </div>
+                <div class="div-centerer" id="announcement-bar">
+                    <div class="loading-bar"  id="announcement-progress-bar">
+                        <div class="inner-loading-bar" id="announcement-progress"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="announcement-module-container">
+                
+            </div>
+        </template>
+        <template id="assignment-veiw">
+            <div id="container">
+                <div class="div-centerer" id="assignment-text">
+                    <h1 class="title-text" id="assignment-title">Assignments</h1>
+                    <p class="total-score" id="assignment-number">0/0</p>
+                </div>
+                <div class="div-centerer" id="dated-bar">
+                    <div class="loading-bar"  id="assignment-progress-bar">
+                        <div class="inner-loading-bar" id="assignment-progress"></div>
+                    </div>
+                </div>
+                <div class="div-centerer" id="undated-assignment-text">
+                    <h1 class="title-text" id="undated-assignment-title">Undated</h1>
+                    <p class ="total-score" id="undated-assignment-number">0/0</p>
+                </div>
+                <div class="div-centerer" id="undated-bar">
+                    <div class="loading-bar" id="undated-assignment-progress-bar">
+                        <div class="inner-loading-bar id="undated-assignment-progress"></div>
+                    </div>
+                </div>
+                <div id="assignment-module-container">
+                    
+                </div>
+            </div>
+        </template>
+        <template id="grade-veiw">
+            <div id="scrollable-shell">
+                <h1>grades</h1>
+                <div id="grade-container">
+                </div>
+            </div>
+        </template>
+    </div>
+</div>
+
+<script src="lib/flatpickr.min.js"></script>
+<script src="manager.js" ></script>
